@@ -1,0 +1,74 @@
+/* 
+    Reset CSS
+    This file removes browser default styles to ensure consistent styling across browsers
+ */
+
+ /* Apply border-box to all elements for more predictable sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set base font and sizing for the entire document */
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+/* Improve text rendering */
+/* 
+    -webkit-font-smoothing: antialiased;
+    property specifically for WebKit-based browsers (like Chrome, Safari)
+    controls how fonts are rendered on the screen
+    "antialiased" value makes text appear smoother by applying anti-aliasing
+    Anti-aliasing softens the edges of text by adding semi-transparent pixels along the edges
+    This generally makes fonts look thinner and smoother, especially on non-Retina displays
+    It's particularly noticeable with light text on dark backgrounds
+
+    -moz-osx-font-smoothing: grayscale;
+    Firefox-specific property, particularly for macOS
+    "grayscale" value applies a similar smoothing effect to text
+    makes text rendering more consistent with how it appears in WebKit browsers with antialiasing enabled
+    helps maintain a consistent appearance across different browsers
+*/
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure form elements inherit font styles */
+/*
+    By default, browsers apply their own styling to form elements, often using different fonts than the rest of your website
+
+*/
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* Prevent text overflow issues */
+/*
+    previously called word-wrap
+    controls what happens when a word is too long to fit within its container
+    break-word, it allows long words to be broken at arbitrary points if there are no otherwise acceptable break points
+    prevents text from overflowing outside its container and breaking your layout
+    
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* Make media elements responsive by default */
+/*
+    By default, elements like img are inline elements
+    Inline elements have some spacing quirks, including a small gap below them (to account for descenders in text)
+    removes these gaps and gives you more predictable layout behavior
+    It makes the element take up the full width of its container by default
+    This prevents media elements from overflowing their containers
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
