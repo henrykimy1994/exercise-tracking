@@ -1,0 +1,71 @@
+/* 
+    Authentication CSS
+    Styles specific to login and signup pages
+*/
+
+/* Container that centers the auth card vertically and horizontally on the page */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.auth-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    transition: transform var(--transition-speed) var(--transition-timing), box-shadow var(--transition-speed) var(--transition-timing);
+}
+
+/* Subtle animation when hovering over the card */
+.auth-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.auth-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.auth-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+/* Main content area containing form elements */
+.auth-content {
+    padding: 2rem;
+}
+
+.auth-content h2 {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.auth-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.auth-color a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition-speed) var(--transition-timing);
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+.auth-form {
+    margin-bottom: 1rem;
+}

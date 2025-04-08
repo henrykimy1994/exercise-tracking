@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitTrack - Login</title>
+    <title>FitTrack - Sign Up</title>
     <link rel="stylesheet" href="/frontend/assets/css/reset.css">
     <link rel="stylesheet" href="/frontend/assets/css/common.css">
     <link rel="stylesheet" href="/frontend/assets/css/auth.css">
@@ -17,24 +17,29 @@
                 <p>Track your fitness journey</p>
             </div>
             <div class="auth-content">
-                <h2>Login</h2>
-                <form id="login-form" class="auth-form">
+                <h2>Create Account</h2>
+                <form id="signup-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" required>
+                        <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" name="password" id="password" required>
+                        <input type="password" id="password" name="password" required>
                     </div>
-                    <div class="form-error" id="login-error"></div>
-                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirmpassword" required>
+                    </div>
+                    <div class="form-error" id="signup-error"></div>
+                    <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
                 </form>
                 <div class="auth-footer">
-                    <p>
-                        Don't have an account?
-                        <a href="/frontend/pages/signup.html">Sign up</a>
-                    </p>
+                    <p>Already have an account? <a href="/frontend/pages/login.html">Login</a></p>
                 </div>
             </div>
         </div>

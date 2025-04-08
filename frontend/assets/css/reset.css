@@ -16,6 +16,7 @@ html, body {
     font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 /* Improve text rendering */
@@ -71,4 +72,37 @@ p, h1, h2, h3, h4, h5, h6 {
 img, picture, video, canvas, svg {
     display: block;
     max-width: 100%;
+}
+
+/* Reset anchor styling */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/* Remove default button styling */
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Improve focus styling for accessibility */
+/* :focus - pseudo-class that applies to elements when they receive focus (like when tabbing through a page with the keyboard) */
+/* targets elements that have focus but don't meet the criteria for :focus-visible */
+:focus:not(:focus-visible) {
+    outline:none;
+}
+
+/* newer pseudo-class that only applies focus styling when the user is navigating via keyboard (not when clicking with a mouse) */
+:focus-visible {
+    /* adds a custom 2px solid outline in our primary color when a user navigates to an element with the keyboard */
+    outline: 2px solid var(--primary-color);
+    /* creates a small gap between the element and the outline for better visibility */
+    outline-offset: 2px;
 }
